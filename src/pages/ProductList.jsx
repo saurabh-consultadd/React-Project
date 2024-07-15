@@ -11,7 +11,7 @@ const ProductList = () => {
       try {
         const response = await fetch('/api/user/showProduct', {
           headers: {
-            Authorization: `Bearer ${localStorage.getItem('token')}` // Assuming token is stored in localStorage
+            Authorization: `Bearer ${localStorage.getItem('token')}`
           }
         });
 

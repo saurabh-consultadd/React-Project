@@ -4,7 +4,7 @@ This is the frontend part of [SpringBoot + JWT Application](https://github.com/s
 
 # Functionality
 
-The project is based on Product Management System where we can add product id, name and price. Also we have role based access control namely ADMIN and USER which internally uses JWT to authenticate their credentials.
+The project is based on Product Management System where we can add product id, name and price. Also we have role based access control namely [ADMIN](#admin) and [USER](#user) which internally uses JWT to authenticate their credentials.
 
 <!-- # Project Build -->
 <!-- # Technology Used -->
@@ -18,7 +18,7 @@ The project is based on Product Management System where we can add product id, n
 <img width="974" alt="Screenshot 2024-07-15 at 11 40 00 AM" src="https://github.com/user-attachments/assets/187a8dac-2780-4929-8b75-822109248f71">
 
 <br/><br/>
-# ADMIN
+# ADMIN <a name = "admin"></a>
 
 Admin has access to perform all operations including add, edit and delete products.
 
@@ -39,7 +39,7 @@ Admin has access to perform all operations including add, edit and delete produc
 
 
 <br/><br/>
-# USER
+# USER <a name = "user"></a>
 
 User has access to only view products list.
 

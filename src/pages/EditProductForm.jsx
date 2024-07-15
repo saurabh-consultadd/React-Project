@@ -17,13 +17,13 @@ const EditProductForm = ({ productId }) => {
         try {
             const response = await fetch(`/api/admin/changeProduct`, {
                 headers: {
-                    Authorization: `Bearer ${localStorage.getItem('token')}` // Attach JWT token
+                    Authorization: `Bearer ${localStorage.getItem('token')}`
                 }
             });
 
             if (response.ok) {
                 const data = await response.json();
-                setProduct(data); // Set product details state
+                setProduct(data);
             } else {
                 throw new Error('Failed to fetch product details');
             }
@@ -47,14 +47,13 @@ const EditProductForm = ({ productId }) => {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
-                    Authorization: `Bearer ${localStorage.getItem('token')}` // Attach JWT token
+                    Authorization: `Bearer ${localStorage.getItem('token')}`
                 },
                 body: JSON.stringify(product)
             });
 
             if (response.ok) {
                 alert('Product updated successfully');
-                // Redirect or handle success
                 navigate("/admin/list");
             } else {
                 throw new Error('Failed to update product');
@@ -81,7 +80,6 @@ const EditProductForm = ({ productId }) => {
                     <label htmlFor="price">Price:</label>
                     <input type="number" id="price" name="price" value={product.price} onChange={handleChange} />
                 </div>
-                {/* Add more fields as needed */}
                 <button type="submit" className="submit-button">Update Product</button>
             </form>
         </div>
